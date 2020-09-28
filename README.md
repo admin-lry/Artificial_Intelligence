@@ -1,9 +1,12 @@
 # Artificial_Intelligence
  算法作业
+ ```java
+
 /*
  * 三枚硬币
  * 初始状态：（反，正，反）
- *           （0，1，0）
+ *
+（0，1，0）
  * 连续翻三枚硬币，能否使最终状态为（0，0，0）或（1，1，1）
  * 翻N次硬币
  * 算法设计：
@@ -16,7 +19,6 @@ for(循环N次，代表N次测试）
      随机决定翻动哪一枚硬币
      调用相关函数，并记录翻动后3枚硬币的状态和每次翻动的硬币对象
    }while(<=3)
-
    比较三次翻动后的结果与目标状态是否匹配，可对所有翻动结果进行去重处理
    输出两个目标状态的达成条件（哪些翻动可以实现初始状态到目标状态的变化）
 }*/
@@ -24,7 +26,8 @@ for(循环N次，代表N次测试）
 import java.util.ArrayList;
 import java.util.List;
 
-public class TurnCoins {
+public class
+TurnCoins {
     public static void main(String[] args) {
         List<String> allFalse = new ArrayList<String>();
         List<String> allTrue = new ArrayList<String>();
@@ -48,11 +51,15 @@ public class TurnCoins {
                 seq.append((j + 1));  //记录翻动的硬币，翻动一次记录一下
             } while (k < 3);//k=0\1\2 翻三次
             if (coins.get(0).equals(coins.get(1)) && coins.get(0).equals(coins.get(2)) && coins.get(0).equals(0)) {
-                if (!allFalse.contains(seq.toString()))
+                if
+                (!allFalse.contains(seq.toString()))
                     allFalse.add(seq.toString());
             }
-            if (coins.get(0).equals(coins.get(1)) && coins.get(0).equals(coins.get(2)) && coins.get(0).equals(1)) {
+            if
+            (coins.get(0).equals(coins.get(1)) && coins.get(0).equals(coins.get(2))
+                    && coins.get(0).equals(1)) {
                 if (!allTrue.contains(seq.toString()))
+
                     allTrue.add(seq.toString());
             }
         }
@@ -66,6 +73,13 @@ public class TurnCoins {
             for (String item : allTrue)
                 System.out.println(item);
         } else System.out.println("没有到达（1，1，1）的翻转方法");
+
     }
+
 }
+
+
+
+```
+
 
